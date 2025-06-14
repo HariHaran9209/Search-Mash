@@ -18,7 +18,7 @@ const App = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/products')
+      const response = await fetch('https://backend-hhfq.onrender.com/api/products')
       const data = await response.json()
       setProducts(data)
     } catch (error) {
@@ -43,7 +43,7 @@ const App = () => {
         }
       });
 
-      const response = await fetch('http://localhost:5000/api/products/search', {
+      const response = await fetch('https://backend-hhfq.onrender.com/api/products/search', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
